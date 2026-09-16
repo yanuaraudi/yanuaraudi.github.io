@@ -65,7 +65,7 @@ a {
     border-bottom: 1px solid var(--line);
 
     font-family: "DM Mono", monospace;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .site-header > * {
@@ -76,24 +76,28 @@ a {
 .site-header-inner {
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: 20px var(--page-padding);
+    padding: 26px var(--page-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-weight: 500;
-    letter-spacing: -0.03em;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .site-header nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 34px;
 }
 
 .site-header nav a {
     position: relative;
+    font-size: 14px;
+    letter-spacing: 0.04em;
 }
 
 .site-header nav a::after {
@@ -116,21 +120,49 @@ a {
     width: 100%;
 }
 
-#lang-toggle {
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: "DM Mono", monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.05em;
-    background: none;
     border: 1px solid var(--line);
-    color: var(--muted);
-    cursor: pointer;
-    padding: 3px 8px;
-    transition: color 150ms ease, border-color 150ms ease;
+    padding: 4px 9px;
+    transition: border-color 150ms ease;
 }
 
-#lang-toggle:hover {
+.lang-switch:hover {
+    border-color: #999;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    color: var(--muted);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 150ms ease;
+}
+
+.lang-btn:hover {
     color: var(--foreground);
-    border-color: var(--foreground);
+}
+
+.lang-btn.active {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.lang-sep {
+    color: var(--line);
+    font-size: 11px;
+    user-select: none;
 }
 
 
@@ -180,22 +212,26 @@ a {
     margin: 0 auto;
 
     padding:
-        100px
+        60px
         var(--page-padding)
-        60px;
+        48px;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0;
 }
 
+/* section-label sits in row 1 — no auto push */
 .hero .section-label {
-    margin-bottom: auto;
+    align-self: start;
 }
 
 .hero-content {
-    padding:
-        80px 0
-        100px;
+    /* vertically centers the h1+desc in the middle row */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 60px;
 }
 
 .eyebrow {
@@ -218,16 +254,15 @@ a {
 }
 
 .hero-description {
-    max-width: 520px;
+    max-width: 480px;
 
-    margin-top: 50px;
-    margin-left: min(35vw, 480px);
+    margin-top: 40px;
 
-    font-size: clamp(18px, 2vw, 28px);
+    font-size: clamp(16px, 1.6vw, 22px);
 
-    line-height: 1.25;
+    line-height: 1.5;
 
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
 }
 
 .scroll-indicator {
@@ -252,9 +287,9 @@ a {
 .work-item {
     display: grid;
 
-    grid-template-columns: 60px 1fr 100px;
+    grid-template-columns: 1fr auto;
 
-    column-gap: 30px;
+    column-gap: 40px;
 
     padding: 42px 0;
 
@@ -269,13 +304,27 @@ a {
     padding-left: 15px;
 }
 
-.work-number,
 .work-year {
     font-family: "DM Mono", monospace;
 
     font-size: 13px;
-
     color: var(--muted);
+    padding-top: 4px;
+}
+
+.work-type {
+    display: inline-block;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    transition: color 150ms ease;
+}
+
+.work-item:hover .work-type {
+    color: var(--foreground);
 }
 
 .work-main h2 {
@@ -360,22 +409,12 @@ a {
 .skills-list > div {
     display: grid;
 
-    grid-template-columns: 60px 1fr auto;
+    grid-template-columns: 1fr auto;
     align-items: center;
 
     padding: 20px 0;
 
     border-bottom: 1px solid var(--line);
-}
-
-.skill-index {
-    font-family: "DM Mono", monospace;
-
-    font-size: 12px;
-
-    color: var(--muted);
-
-    padding-top: 2px;
 }
 
 .skill-name {
@@ -433,30 +472,39 @@ a {
     font-weight: 500;
 }
 
-.email-link {
-    display: inline-flex;
-
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-
-    gap: 15px;
-
+    gap: 24px 44px;
     margin-top: 60px;
-
-    padding-bottom: 5px;
-
-    border-bottom: 1px solid var(--foreground);
-
-    font-family: "DM Mono", monospace;
-
-    font-size: clamp(13px, 2vw, 20px);
 }
 
+.contact-link,
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--foreground);
+    font-family: "DM Mono", monospace;
+    font-size: clamp(14px, 2vw, 19px);
+    transition: opacity 150ms ease;
+}
+
+.contact-link:hover,
+.email-link:hover {
+    opacity: 0.7;
+}
+
+.contact-arrow,
 .email-link span {
     transition: transform 180ms ease;
 }
 
+.contact-link:hover .contact-arrow,
 .email-link:hover span {
-    transform: translate(4px, -4px);
+    transform: translate(3px, -3px);
 }
 
 
@@ -504,8 +552,12 @@ a {
 
 @media (max-width: 700px) {
 
+    .site-header-inner {
+        padding: 20px var(--page-padding);
+    }
+
     .site-header nav {
-        gap: 15px;
+        gap: 18px;
     }
 
     .hero {
@@ -535,7 +587,7 @@ a {
     }
 
     .work-item {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 1fr;
 
         gap: 15px;
     }
@@ -559,12 +611,12 @@ a {
     }
 
     .skills-list > div {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 1fr;
         row-gap: 10px;
     }
 
     .skill-tools {
-        grid-column: 2;
+        grid-column: 1;
         justify-content: flex-start;
         max-width: 100%;
     }
@@ -652,7 +704,15 @@ a {
     font-size: 11px;
     color: var(--muted);
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+#panel-type {
+    color: var(--foreground);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .panel-body {

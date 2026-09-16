@@ -13,10 +13,14 @@
         <div class="site-header-inner">
             <a href="/" class="logo">YANUAR.</a>
             <nav>
-                <a href="#work" data-en="WORK" data-id="KARYA">WORK</a>
-                <a href="#about" data-en="ABOUT" data-id="TENTANG">ABOUT</a>
-                <a href="#contact" data-en="CONTACT" data-id="KONTAK">CONTACT</a>
-                <button id="lang-toggle">ID</button>
+                <a href="#projects" data-en="PROJECTS" data-id="PROYEK">PROJECTS</a>
+                <a href="#about" data-en="ABOUT" data-id="TENTANG SAYA">ABOUT</a>
+                <a href="#contact" data-en="CONTACT" data-id="HUBUNGI SAYA">CONTACT</a>
+                <div class="lang-switch" role="group" aria-label="Language selector">
+                    <button class="lang-btn active" data-lang-btn="en" aria-label="English">EN</button>
+                    <span class="lang-sep">/</span>
+                    <button class="lang-btn" data-lang-btn="id" aria-label="Indonesian">ID</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -28,49 +32,54 @@
                 <span data-en="INTRODUCTION" data-id="PENGENALAN">INTRODUCTION</span>
             </div>
             <div class="hero-content">
-                <p class="eyebrow">SOFTWARE DEVELOPER · INDONESIA</p>
+                <p class="eyebrow" data-en="FULL-STACK &amp; BACKEND DEVELOPER · INDONESIA" data-id="FULL-STACK &amp; BACKEND DEVELOPER · INDONESIA">FULL-STACK &amp; BACKEND DEVELOPER · INDONESIA</p>
                 <h1 data-en="Hello,<br>I'm Yanuar." data-id="Halo,<br>Saya Yanuar.">
                     Hello,<br>
                     I'm Yanuar.
                 </h1>
                 <p class="hero-description"
-                   data-en="I build software, design systems, and explore how technology can solve interesting problems."
-                   data-id="Saya membangun perangkat lunak, merancang sistem, dan mengeksplorasi cara teknologi memecahkan masalah nyata.">
-                    I build software, design systems,
-                    and explore how technology can solve
-                    interesting problems.
+                   data-en="I build software across the stack, with a focus on backend systems, architecture, and the details that make applications work."
+                   data-id="Saya membangun perangkat lunak dari berbagai sisi, dengan fokus pada sistem backend, arsitektur, dan detail yang membuat sebuah aplikasi dapat berjalan dengan baik.">
+                   I build software across the stack, with a focus on backend systems, architecture, and the details that make applications work.
                 </p>
             </div>
             <div class="scroll-indicator">
-                <span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span>
+                <span data-en="SCROLL TO EXPLORE" data-id="LIHAT LEBIH LANJUT">SCROLL TO EXPLORE</span>
                 <span>↓</span>
             </div>
         </section>
 
-        <!-- Selected Work -->
-        <section id="work" class="work section">
+        <!-- Selected Projects -->
+        <section id="projects" class="work section">
             <div class="section-label">
                 <span>01</span>
-                <span data-en="SELECTED WORK" data-id="KARYA TERPILIH">SELECTED WORK</span>
+                <span data-en="SELECTED PROJECTS" data-id="PROYEK PILIHAN">SELECTED PROJECTS</span>
             </div>
             <div class="work-list">
                 <!-- Project 01 -->
                 <article class="work-item" data-project="stethosoul">
-                    <div class="work-number">01</div>
                     <div class="work-main">
+                        <span class="work-type" data-en="WORK / INTERN PROJECT" data-id="PROYEK KERJA / MAGANG">WORK / INTERN PROJECT</span>
                         <h2>STETHOSOUL</h2>
                         <p class="work-description"
-                           data-en="An early detection system for psychosis using automatic speech recognition and syntactic-semantic language analysis."
-                           data-id="Sistem deteksi dini psikosis menggunakan pengenalan suara otomatis dan analisis bahasa sintaktik-semantik.">
-                            An early detection system for psychosis
-                            using automatic speech recognition and
-                            syntactic-semantic language analysis.
+                           data-en="A full-stack platform for psychosis early detection, combining speech processing, language analysis, and role-based clinical workflows."
+                           data-id="Platform full-stack untuk deteksi dini psikosis yang menggabungkan pemrosesan suara, analisis bahasa, dan alur kerja klinis berbasis peran.">
+                            A full-stack platform for psychosis early detection, combining speech processing, language analysis, and role-based clinical workflows.
                         </p>
                         <div class="work-meta">
                             <span>DESIGN</span>
-                            <span>ARCHITECTURE</span>
-                            <span>FRONTEND</span>
-                            <span>BACKEND</span>
+                            <span>FIGMA</span>
+                            <span>NEXT.JS</span>
+                            <span>GOLANG</span>
+                            <span>MONGODB</span>
+                            <span>NATS</span>
+                            <span>REST API</span>
+                            <span>MIDTRANS</span>
+                            <span>MINIO</span>
+                            <span>SMTP</span>
+                            <span>DOCKER</span>
+                            <span>AUTHENTICATION</span>
+                            <span>GITLAB</span>
                         </div>
                     </div>
                     <div class="work-year">2026</div>
@@ -78,43 +87,42 @@
 
                 <!-- Project 02 -->
                 <article class="work-item" data-project="mosquito">
-                    <div class="work-number">02</div>
                     <div class="work-main">
+                        <span class="work-type" data-en="THESIS PROJECT" data-id="PROYEK TUGAS AKHIR">THESIS PROJECT</span>
                         <h2>MOSQUITO CLASSIFICATION</h2>
                         <p class="work-description"
-                           data-en="A hybrid deep learning model combining a YOLO11 detection head with a ResNet18 backbone for mosquito species classification."
-                           data-id="Model deep learning hibrida yang menggabungkan kepala deteksi YOLO11 dengan backbone ResNet18 untuk klasifikasi spesies nyamuk.">
-                            A hybrid deep learning model combining
-                            a YOLO11 detection head with a ResNet18
-                            backbone for mosquito species classification.
+                           data-en="A computer-vision model for classifying three mosquito species, achieving 96.44% accuracy."
+                           data-id="Model computer vision untuk mengklasifikasikan tiga spesies nyamuk dengan akurasi 96,44%.">
+                            A computer-vision model for classifying three mosquito species, achieving 96.44% accuracy.
                         </p>
                         <div class="work-meta">
                             <span>PYTHON</span>
+                            <span>YOLO11</span>
+                            <span>RESNET18</span>
                             <span>COMPUTER VISION</span>
                             <span>DEEP LEARNING</span>
-                            <span>YOLO11</span>
+                            <span>FLASK</span>
                         </div>
                     </div>
                     <div class="work-year">2026</div>
                 </article>
 
                 <!-- Project 03 -->
-                <article class="work-item" data-project="haven">
-                    <div class="work-number">03</div>
+                <article class="work-item" data-project="psi">
                     <div class="work-main">
-                        <h2>HAVEN</h2>
+                        <span class="work-type" data-en="WORK / INTERN PROJECT" data-id="PROYEK KERJA / MAGANG">WORK / INTERN PROJECT</span>
+                        <h2>PSI INCENTIVE API</h2>
                         <p class="work-description"
-                           data-en="An exploration of a private, local-first digital vault designed around encrypted personal data and optional cloud synchronization."
-                           data-id="Eksplorasi brankas digital privat yang dirancang di sekitar data terenkripsi dan sinkronisasi cloud opsional.">
-                            An exploration of a private, local-first
-                            digital vault designed around encrypted
-                            personal data and optional cloud synchronization.
+                           data-en="A REST API for an academic incentive-submission system at Universitas Sumatera Utara."
+                           data-id="REST API untuk sistem pengajuan insentif akademik di Universitas Sumatera Utara.">
+                            A REST API for an academic incentive-submission system at Universitas Sumatera Utara.
                         </p>
                         <div class="work-meta">
-                            <span>SYSTEM DESIGN</span>
-                            <span>SECURITY</span>
-                            <span>DESKTOP</span>
-                            <span>ENCRYPTION</span>
+                            <span>JAVA</span>
+                            <span>SPRING BOOT</span>
+                            <span>MONGODB</span>
+                            <span>REST API</span>
+                            <span>BACKEND DEVELOPMENT</span>
                         </div>
                     </div>
                     <div class="work-year">2026</div>
@@ -126,30 +134,26 @@
         <section id="about" class="about section">
             <div class="section-label">
                 <span>02</span>
-                <span data-en="ABOUT" data-id="TENTANG">ABOUT</span>
+                <span data-en="ABOUT" data-id="TENTANG SAYA">ABOUT</span>
             </div>
             <div class="about-content">
                 <p class="about-lead"
-                   data-en="I'm a software developer with a background in Information Technology."
-                   data-id="Saya seorang pengembang perangkat lunak dengan latar belakang Teknologi Informasi.">
-                    I'm a software developer with a background in
-                    Information Technology.
+                   data-en="I'm an Information Technology graduate with a strong interest in software development, backend engineering, and system architecture."
+                   data-id="Saya adalah lulusan Teknologi Informasi dengan ketertarikan kuat pada pengembangan perangkat lunak, backend engineering, dan arsitektur sistem.">
+                    I’m an Information Technology graduate with a strong interest in software development, backend engineering, and system architecture.
                 </p>
                 <div class="about-text">
-                    <p data-en="My interests lie somewhere between software development, system architecture, backend engineering, and understanding how different pieces of technology fit together."
-                       data-id="Minat saya berada di antara pengembangan perangkat lunak, arsitektur sistem, rekayasa backend, dan memahami bagaimana berbagai teknologi saling berkaitan.">
-                        My interests lie somewhere between software
-                        development, system architecture, backend
-                        engineering, and understanding how different
-                        pieces of technology fit together.
+                    <p data-en="I’ve always been drawn to technology, especially computers and the way different pieces of a system come together. I enjoy understanding how things work beneath the surface, then turning that understanding into something useful, whether that means designing a system, building an API, working with databases, or creating an interface around it."
+                       data-id="Sejak awal, saya memang tertarik dengan teknologi, terutama komputer dan bagaimana berbagai bagian dari sebuah sistem dapat saling terhubung dan bekerja bersama. Saya senang memahami bagaimana sesuatu bekerja di balik layar, kemudian menerjemahkan pemahaman tersebut menjadi sesuatu yang berguna — baik itu merancang sebuah sistem, membangun API, mengelola database, maupun membuat antarmuka untuk menggunakannya.">
+                        I’ve always been drawn to technology, especially computers and the way different pieces of a system come together. I enjoy understanding how things work beneath the surface, then turning that understanding into something useful, whether that means designing a system, building an API, working with databases, or creating an interface around it.
                     </p>
-                    <p data-en="I also enjoy working on the parts of a project that sit outside pure implementation — from designing interfaces and documenting systems to thinking about how the architecture should actually work."
-                       data-id="Saya juga menikmati bagian proyek di luar implementasi murni — mulai dari merancang antarmuka dan mendokumentasikan sistem hingga memikirkan cara arsitektur seharusnya bekerja.">
-                        I also enjoy working on the parts of a project
-                        that sit outside pure implementation — from
-                        designing interfaces and documenting systems
-                        to thinking about how the architecture should
-                        actually work.
+                    <p data-en="My experience spans backend services, REST APIs, databases, asynchronous processing, frontend integration, and UI/UX design. I’ve worked with technologies such as Go, Java and Spring Boot, Next.js, MongoDB, NATS, and Figma across academic, freelance, and professional projects."
+                       data-id="Pengalaman saya mencakup pengembangan layanan backend, REST API, database, pemrosesan asynchronous, integrasi frontend, hingga UI/UX. Saya pernah menggunakan berbagai teknologi seperti Go, Java dan Spring Boot, Next.js, MongoDB, NATS, dan Figma dalam berbagai proyek akademik, freelance, maupun profesional.">
+                        My experience spans backend services, REST APIs, databases, asynchronous processing, frontend integration, and UI/UX design. I’ve worked with technologies such as Go, Java and Spring Boot, Next.js, MongoDB, NATS, and Figma across academic, freelance, and professional projects.
+                    </p>
+                    <p data-en="I care about clear architecture, maintainable code, and thoughtful user experiences. More than simply making something work, I enjoy thinking about why it should be built a certain way and how all of its parts can work together."
+                       data-id="Saya peduli pada arsitektur yang jelas, kode yang mudah dipelihara, dan pengalaman pengguna yang dirancang dengan baik. Bagi saya, membuat sesuatu sekadar dapat berjalan bukanlah satu-satunya tujuan. Saya juga menikmati proses memahami mengapa sesuatu sebaiknya dibangun dengan cara tertentu dan bagaimana setiap bagiannya dapat bekerja sebagai satu kesatuan.">
+                        I care about clear architecture, maintainable code, and thoughtful user experiences. More than simply making something work, I enjoy thinking about why it should be built a certain way and how all of its parts can work together.
                     </p>
                 </div>
             </div>
@@ -163,7 +167,6 @@
             </div>
             <div class="skills-list">
                 <div class="skill-row">
-                    <span class="skill-index">01</span>
                     <span class="skill-name" data-en="BACKEND DEVELOPMENT" data-id="PENGEMBANGAN BACKEND">BACKEND DEVELOPMENT</span>
                     <div class="skill-tools">
                         <span>GO</span>
@@ -175,7 +178,6 @@
                     </div>
                 </div>
                 <div class="skill-row">
-                    <span class="skill-index">02</span>
                     <span class="skill-name" data-en="WEB DEVELOPMENT" data-id="PENGEMBANGAN WEB">WEB DEVELOPMENT</span>
                     <div class="skill-tools">
                         <span>NEXT.JS</span>
@@ -184,7 +186,6 @@
                     </div>
                 </div>
                 <div class="skill-row">
-                    <span class="skill-index">03</span>
                     <span class="skill-name" data-en="SYSTEM ARCHITECTURE" data-id="ARSITEKTUR SISTEM">SYSTEM ARCHITECTURE</span>
                     <div class="skill-tools">
                         <span>DOCKER</span>
@@ -193,7 +194,6 @@
                     </div>
                 </div>
                 <div class="skill-row">
-                    <span class="skill-index">04</span>
                     <span class="skill-name" data-en="DATABASES" data-id="BASIS DATA">DATABASES</span>
                     <div class="skill-tools">
                         <span>MYSQL</span>
@@ -202,14 +202,12 @@
                     </div>
                 </div>
                 <div class="skill-row">
-                    <span class="skill-index">05</span>
                     <span class="skill-name" data-en="UI / UX DESIGN" data-id="DESAIN UI / UX">UI / UX DESIGN</span>
                     <div class="skill-tools">
                         <span>FIGMA</span>
                     </div>
                 </div>
                 <div class="skill-row">
-                    <span class="skill-index">06</span>
                     <span class="skill-name" data-en="MACHINE LEARNING" data-id="PEMBELAJARAN MESIN">MACHINE LEARNING</span>
                     <div class="skill-tools">
                         <span>PYTHON</span>
@@ -224,21 +222,27 @@
         <section id="contact" class="contact section">
             <div class="section-label">
                 <span>04</span>
-                <span data-en="CONTACT" data-id="KONTAK">CONTACT</span>
+                <span data-en="CONTACT" data-id="HUBUNGI SAYA">CONTACT</span>
             </div>
             <div class="contact-content">
                 <p class="contact-eyebrow"
-                   data-en="HAVE SOMETHING TO TALK ABOUT?"
-                   data-id="ADA YANG INGIN DIBICARAKAN?">
-                    HAVE SOMETHING TO TALK ABOUT?
+                   data-en="HAVE A PROJECT OR OPPORTUNITY IN MIND?"
+                   data-id="PUNYA PROYEK ATAU PELUANG UNTUK DIDISKUSIKAN?">
+                    HAVE A PROJECT OR OPPORTUNITY IN MIND?
                 </p>
-                <h2 data-en="Let's talk." data-id="Mari bicara.">
-                    Let's talk.
+                <h2 data-en="Let’s talk." data-id="Mari berbicara.">
+                    Let’s talk.
                 </h2>
-                <a href="mailto:yayanaudi9@gmail.com" class="email-link">
-                    yayanaudi9@gmail.com
-                    <span>↗</span>
-                </a>
+                <div class="contact-links">
+                    <a href="mailto:yayanaudi9@gmail.com" class="contact-link">
+                        <span>yayanaudi9@gmail.com</span>
+                        <span class="contact-arrow">↗</span>
+                    </a>
+                    <a href="https://wa.me/6289509077459" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span>+62 895-0907-7459 (WhatsApp)</span>
+                        <span class="contact-arrow">↗</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -247,8 +251,9 @@
     <footer class="site-footer">
         <span>© 2026 YANUAR AUDI NUGRAHA</span>
         <div>
-            <a href="#" target="_blank">GITHUB ↗</a>
-            <a href="#" target="_blank">LINKEDIN ↗</a>
+            <a href="https://github.com/yanuaraudi" target="_blank">GITHUB ↗</a>
+            <a href="https://linkedin.com/in/yanuar-audi-nugraha" target="_blank">LINKEDIN ↗</a>
+            <a href="https://wa.me/6289509077459" target="_blank" rel="noopener noreferrer">WHATSAPP ↗</a>
         </div>
         <span data-en="BUILT WITH HTML / CSS" data-id="DIBUAT DENGAN HTML / CSS">BUILT WITH HTML / CSS</span>
     </footer>
@@ -258,23 +263,23 @@
     <aside class="work-panel" id="work-panel">
         <div class="panel-header">
             <div class="panel-meta">
+                <span id="panel-type"></span>
                 <span id="panel-year">2026</span>
-                <span id="panel-num">01</span>
             </div>
-            <button class="panel-close" id="panel-close">CLOSE ✕</button>
+            <button class="panel-close" id="panel-close" data-en="CLOSE ✕" data-id="TUTUP ✕">CLOSE ✕</button>
         </div>
         <div class="panel-body">
             <h2 class="panel-title" id="panel-title">PROJECT</h2>
             <div class="panel-section">
-                <p class="panel-section-label">OVERVIEW</p>
+                <p class="panel-section-label" data-en="OVERVIEW" data-id="RINGKASAN">OVERVIEW</p>
                 <p class="panel-text" id="panel-overview"></p>
             </div>
             <div class="panel-section">
-                <p class="panel-section-label">THE STORY</p>
+                <p class="panel-section-label" data-en="DESCRIPTION" data-id="DESKRIPSI">DESCRIPTION</p>
                 <p class="panel-text" id="panel-story"></p>
             </div>
             <div class="panel-section">
-                <p class="panel-section-label">STACK</p>
+                <p class="panel-section-label" data-en="STACK" data-id="TEKNOLOGI">STACK</p>
                 <div class="panel-tags" id="panel-tags"></div>
             </div>
             <div class="panel-links" id="panel-links"></div>
