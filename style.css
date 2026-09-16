@@ -436,7 +436,7 @@ a {
 
     color: var(--muted);
 
-    max-width: 320px;
+    max-width: 440px;
 }
 
 .technology-line {
@@ -746,6 +746,7 @@ a {
     font-size: 16px;
     line-height: 1.75;
     color: #4d4c48;
+    white-space: pre-line;
 }
 
 .panel-tags {

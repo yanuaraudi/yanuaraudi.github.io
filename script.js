@@ -80,8 +80,7 @@ const projects = {
         links: []
     },
     psi: {
-        num: '03',
-        year: '2026',
+        year: '2025',
         type: { en: 'WORK / INTERN PROJECT', id: 'PROYEK KERJA / MAGANG' },
         title: 'PSI INCENTIVE API',
         overview: {
@@ -92,7 +91,52 @@ const projects = {
             en: 'While working with Pusat Sistem Informasi Universitas Sumatera Utara, I developed backend services in Java and Spring Boot based on system requirements. I designed and managed the MongoDB database, integrated it with the API, tested and debugged the endpoints, and collaborated with other developers to deliver reliable system behavior.',
             id: 'Selama bekerja bersama Pusat Sistem Informasi Universitas Sumatera Utara, saya mengembangkan layanan backend dengan Java dan Spring Boot berdasarkan kebutuhan sistem. Saya merancang dan mengelola database MongoDB, mengintegrasikannya dengan API, menguji serta men-debug endpoint, dan berkolaborasi dengan pengembang lain untuk menghadirkan performa sistem yang andal.'
         },
-        tags: ['JAVA', 'SPRING BOOT', 'MONGODB', 'REST API', 'BACKEND DEVELOPMENT', 'DATABASE DESIGN'],
+        tags: ['JAVA', 'SPRING BOOT', 'MONGODB', 'REST API', 'BACKEND DEVELOPMENT'],
+        links: []
+    },
+    haven: {
+        year: '2026',
+        type: { en: 'PERSONAL PROJECT', id: 'PROYEK PRIBADI' },
+        title: 'HAVEN',
+        overview: {
+            en: "A personal, local-first password manager designed to securely store and manage credentials while keeping the user's vault under their control.",
+            id: "Password manager personal dengan pendekatan local-first yang dirancang untuk menyimpan dan mengelola kredensial secara aman, dengan tetap memberikan kendali penuh kepada pengguna atas vault mereka."
+        },
+        story: {
+            en: "Haven is a project I've wanted to build since my first year of university. As I started accumulating more accounts and realizing how difficult it was to manage different passwords securely, I began imagining a personal password manager that I could use myself. The idea stayed with me for years before I finally started turning it into an actual project.\n\nHaven is designed around a local-first approach, where the encrypted vault remains the primary source of truth. It uses Argon2id for password-based key derivation and XChaCha20-Poly1305 to protect the vault's contents. The project also explores optional synchronization through Google Drive, allowing the encrypted vault to be stored and synchronized without requiring Haven to operate its own backend.\n\nThe application is currently under development. Beyond building a password manager, Haven has become an opportunity for me to explore application security, encryption, local data management, synchronization, and desktop application architecture.",
+            id: "Haven adalah proyek yang sudah ingin saya buat sejak tahun pertama kuliah. Ketika mulai memiliki semakin banyak akun dan menyadari betapa sulitnya mengelola berbagai password dengan aman, saya mulai membayangkan sebuah password manager pribadi yang dapat saya gunakan sendiri. Ide tersebut terus ada selama bertahun-tahun hingga akhirnya saya mulai merealisasikannya menjadi sebuah proyek.\n\nHaven dirancang dengan pendekatan local-first, di mana encrypted vault menjadi sumber data utama. Haven menggunakan Argon2id untuk proses derivasi kunci berbasis password dan XChaCha20-Poly1305 untuk melindungi isi vault. Proyek ini juga mengeksplorasi sinkronisasi opsional melalui Google Drive, sehingga vault yang telah terenkripsi dapat disimpan dan disinkronkan tanpa Haven harus menyediakan backend sendiri.\n\nSaat ini Haven masih dalam tahap pengembangan. Selain membangun sebuah password manager, Haven menjadi kesempatan bagi saya untuk mempelajari lebih jauh mengenai keamanan aplikasi, enkripsi, pengelolaan data lokal, sinkronisasi, dan arsitektur aplikasi desktop."
+        },
+        tags: ['RUST', 'TAURI', 'ENCRYPTION', 'ARGON2ID', 'LOCAL-FIRST', 'GOOGLE DRIVE', 'OAUTH', 'DESKTOP APPLICATION', 'SYSTEM DESIGN'],
+        links: []
+    },
+    'bintang-donor': {
+        year: '2025',
+        type: { en: 'FREELANCE PROJECT', id: 'PROYEK FREELANCE' },
+        title: 'BINTANG DONOR',
+        overview: {
+            en: 'A web application developed for a faculty at Universitas Sumatera Utara to manage donor announcements and registration for blood donation events.',
+            id: 'Aplikasi web yang dikembangkan untuk salah satu fakultas di Universitas Sumatera Utara untuk mengelola pengumuman donor dan pendaftaran kegiatan donor darah.'
+        },
+        story: {
+            en: 'Bintang Donor is a freelance web application I developed for one of the faculties at Universitas Sumatera Utara. The platform was created to make blood donation events easier to announce and manage, while providing a centralized way for participants to register.\n\nThe system focuses on two main functions: publishing donor announcements and managing event registration. WhatsApp notifications are used to communicate information about donation activities, helping connect announcements and registration with a communication channel that participants already use.\n\nI developed the application using Laravel and MySQL, handling the web application and database layer as part of the project.',
+            id: 'Bintang Donor adalah aplikasi web freelance yang saya kembangkan untuk salah satu fakultas di Universitas Sumatera Utara. Platform ini dibuat untuk mempermudah penyampaian informasi kegiatan donor darah sekaligus menyediakan tempat terpusat bagi peserta untuk melakukan pendaftaran.\n\nSistem ini berfokus pada dua fungsi utama, yaitu penyampaian pengumuman donor dan pengelolaan pendaftaran kegiatan. Notifikasi melalui WhatsApp digunakan untuk menyampaikan informasi terkait kegiatan donor, sehingga proses pengumuman dan pendaftaran dapat terhubung dengan media komunikasi yang sudah umum digunakan oleh peserta.\n\nSaya mengembangkan aplikasi ini menggunakan Laravel dan MySQL, termasuk bagian aplikasi web dan pengelolaan database.'
+        },
+        tags: ['PHP', 'LARAVEL', 'MYSQL', 'WEB DEVELOPMENT', 'DATABASE', 'FREELANCE'],
+        links: []
+    },
+    etl: {
+        year: '2023',
+        type: { en: 'ACADEMIC PROJECT', id: 'PROYEK AKADEMIK' },
+        title: 'WEATHER ETL & DATA VISUALIZATION',
+        overview: {
+            en: 'An automated weather-data pipeline built to collect, transform, store, and visualize forecast data using Apache Airflow, Docker, Python, and Tableau.',
+            id: 'Pipeline data cuaca otomatis yang dibangun untuk mengambil, mentransformasi, menyimpan, dan memvisualisasikan data prakiraan cuaca menggunakan Apache Airflow, Docker, Python, dan Tableau.'
+        },
+        story: {
+            en: 'This project was developed as part of a Database Management Systems course at Universitas Sumatera Utara. The goal was to build an automated ETL pipeline capable of continuously collecting data from an external source at a scheduled interval.\n\nI chose to retrieve weather forecast data through an API and used Apache Airflow to orchestrate the pipeline. The collected data was then transformed using Python and Pandas, including data-type conversion, selecting relevant fields, and preparing the data for further analysis.\n\nThe processed data was stored across two different databases, MySQL and PostgreSQL. Rather than simply duplicating the same data in both databases, the data was structured with relationships that allowed corresponding records across the two systems to remain connected.\n\nFinally, the processed data was connected to Tableau for visualization and analysis, allowing the weather data to be presented as information that could be explored beyond the raw dataset.\n\nThe entire ETL workflow was containerized using Docker, making the pipeline and its supporting services easier to configure and run consistently.',
+            id: 'Proyek ini dikembangkan sebagai bagian dari mata kuliah Database Management Systems di Universitas Sumatera Utara. Tujuannya adalah membangun pipeline ETL otomatis yang dapat mengambil data dari sumber eksternal secara berkala berdasarkan jadwal yang telah ditentukan.\n\nSaya memilih menggunakan data prakiraan cuaca yang diambil melalui API dan menggunakan Apache Airflow untuk mengatur serta menjalankan pipeline tersebut. Data yang diperoleh kemudian ditransformasi menggunakan Python dan Pandas, termasuk mengubah tipe data, memilih informasi yang relevan, dan menyiapkan data agar dapat digunakan untuk analisis lebih lanjut.\n\nData yang telah diproses kemudian disimpan ke dalam dua database yang berbeda, yaitu MySQL dan PostgreSQL. Data tidak hanya diduplikasi ke kedua database, tetapi disusun menggunakan relasi sehingga data yang saling berkaitan pada kedua sistem tetap dapat terhubung.\n\nSetelah itu, data digunakan sebagai sumber untuk visualisasi dan analisis menggunakan Tableau, sehingga data prakiraan cuaca dapat disajikan menjadi informasi yang lebih mudah dieksplorasi dibandingkan data mentah.\n\nSeluruh proses ETL beserta layanan pendukungnya dijalankan menggunakan Docker, sehingga pipeline dapat dikonfigurasi dan dijalankan secara lebih konsisten.'
+        },
+        tags: ['PYTHON', 'PANDAS', 'APACHE AIRFLOW', 'DOCKER', 'TABLEAU', 'MYSQL', 'POSTGRESQL', 'ETL', 'DATA ENGINEERING', 'DATA VISUALIZATION'],
         links: []
     }
 };
